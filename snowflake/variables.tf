@@ -10,6 +10,7 @@ variable "create_db" {
 
 variable "db_name" {
   type = string
+  default = ""
 }
 
 variable "create_wh" {
@@ -19,6 +20,7 @@ variable "create_wh" {
 
 variable "wh_name" {
   type = string
+  default = ""
 }
 
 variable "wh_size" {
@@ -48,10 +50,12 @@ variable "create_schema" {
 
 variable "schema_db_name" {
   type = string
+  default = ""
 }
 
 variable "schema_name" {
   type = string
+  default = ""
 }
 
 variable "create_role" {
@@ -61,6 +65,7 @@ variable "create_role" {
 
 variable "role_name" {
   type = string
+  default = ""
 }
 
 variable "create_role_grants" {
@@ -70,14 +75,17 @@ variable "create_role_grants" {
 
 variable "role_grants_role_name" {
   type = string
+  default = ""
 }
 
 variable "role_grants_roles" {
   type = set(string)
+  default = []
 }
 
 variable "role_grants_users" {
   type = set(string)
+  default = [ ]
 }
 
 variable "create_database_grant" {
@@ -87,10 +95,12 @@ variable "create_database_grant" {
 
 variable "database_grant_database_name" {
   type = string
+  default = ""
 }
 
 variable "database_grant_privilege" {
     type = string
+    default = ""
 }
 
 variable "database_grant_roles" {
@@ -104,12 +114,15 @@ variable "create_warehouse_grant" {
 
 variable "warehouse_grant_warehouse_name" {
   type = string
+  default = ""
 }
 
 variable "warehouse_grant_privilege" {
   type = string
+  default = ""
 }
 
 variable "warehouse_grant_roles" {
   type = set(string)
+  default = [ ]
 }

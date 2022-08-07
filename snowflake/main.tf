@@ -54,7 +54,7 @@ resource "snowflake_role_grants" "grants" {
     users = var.role_grants_users
 }
 
-resource snowflake_database_grant grant {
+resource "snowflake_database_grant" "grant" {
     count = var.create_database_grant ? 1 : 0
     database_name = var.database_grant_database_name
     privilege = var.database_grant_privilege
@@ -63,7 +63,7 @@ resource snowflake_database_grant grant {
     with_grant_option = false
 }
 
-resource snowflake_warehouse_grant grant {
+resource "snowflake_warehouse_grant" "grant" {
     count = var.create_warehouse_grant ? 1 : 0
     warehouse_name = var.warehouse_grant_warehouse_name
     privilege = var.warehouse_grant_privilege

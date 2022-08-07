@@ -105,6 +105,7 @@ variable "database_grant_privilege" {
 
 variable "database_grant_roles" {
   type = set(string)
+  default = [ ]
 }
 
 variable "create_warehouse_grant" {

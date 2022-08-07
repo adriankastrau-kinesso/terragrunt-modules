@@ -98,7 +98,7 @@ variable "database_grant_roles" {
 }
 
 variable "create_warehouse_grant" {
-  type = boolean
+  type = bool
   default = false
 }
 
